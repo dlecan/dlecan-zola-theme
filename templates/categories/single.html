@@ -23,7 +23,7 @@
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
-      <div class="column is-9">
+      <div class="column">
         {% if paginator %}
         {% set pages = paginator.pages %}
         {% else %}
@@ -61,7 +61,7 @@
               {{ macros::render_categories(categories=page.taxonomies.categories) }}
               {% endif %}
             </div>
-            <div class="column has-text-right-desktop">
+            <div class="column has-text-right-desktop is-two-thirds">
               {% if page.taxonomies.tags %}
               {{ macros::render_tags(tags=page.taxonomies.tags) }}
               {% endif %}

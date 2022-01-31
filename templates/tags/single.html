@@ -23,7 +23,7 @@
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
-      <div class="column is-9">
+      <div class="column">
         {% if paginator %}
         {% set pages = paginator.pages %}
         {% else %}
@@ -38,7 +38,7 @@
             </a>
           </h2>
           <p class="subtitle">{{ page.description }}</p>
-          <div class="columns is-multiline is-gapless">
+          <div class="columns is-multiline is-gapless is-size-6">
             <div class="column is-8">
               {{ macros::page_publish_metadata(page=page) }}
             </div>
@@ -55,13 +55,13 @@
               </span>
             </a>
           </div>
-          <div class="columns">
+          <div class="columns is-size-6">
             <div class="column">
               {% if page.taxonomies.categories %}
               {{ macros::render_categories(categories=page.taxonomies.categories) }}
               {% endif %}
             </div>
-            <div class="column has-text-right-desktop">
+            <div class="column has-text-right-desktop is-two-thirds">
               {% if page.taxonomies.tags %}
               {{ macros::render_tags(tags=page.taxonomies.tags) }}
               {% endif %}
