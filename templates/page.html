@@ -6,9 +6,9 @@
 
 {% block content %}
 <section class="section">
-  <div class="container">
+  <div class="container is-max-desktop">
     <div class="columns">
-      <div class="column is-8 is-offset-2">
+      <div class="column">
         <article class="box">
           <h1 class="title">
             {{ page.title }}
@@ -73,9 +73,9 @@
 {% block pagination %}
 {% if page.earlier or page.later or page.lighter or page.heavier %}
 <section class="section">
-  <div class="container">
+  <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <div class="column is-8">
+      <div class="column">
         <nav class="level">
           {% if page.later %}
           <div class="level-item has-text-centered">
@@ -123,7 +123,7 @@
 {% block comment %}
 {% if page.extra.comments and config.extra.commenting.disqus %}
 <section class="section">
-  <div class="container">
+  <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-6">
         <div id="disqus_thread"></div>
